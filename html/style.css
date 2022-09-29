@@ -1,0 +1,93 @@
+body{
+    height: 200vh;
+    background-color:#555555 ;
+    color: #000000;
+}
+
+@font-face {
+    font-family: artifi;
+    src: url("./汉仪尚巍手书W.ttf");
+}
+
+/*背景图*/
+.bg{
+    background-image:url("./b.jpg");
+    background-size: cover;
+    /*剪切*/
+    background-position: 50% 50%;
+    /*定位*/
+    height: 235vh;
+    font-family:"artifi";
+    font-size: 400px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*裁剪*/
+    overflow: hidden;
+    padding-top: 100px;
+    user-select: none;
+}
+
+/*文字效果伪元素*/
+.bg::before{
+    content: "";/*继承父元素*/
+    background-image: inherit;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -99;
+}
+
+p{
+    margin: auto;
+    margin-bottom: 50px;
+    user-select: none;
+}
+
+a{
+    border: 3px solid black;
+    padding: 5px 10px;
+    text-decoration:none;
+    border-radius: 17px;
+    background-color: blue;
+    height: 30px;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    cursor:pointer;/*不可被选中*/
+
+
+}
+
+a:hover{
+    transform: translate(0,-7px);
+    box-shadow: 3px 3px 4px orange;
+}
+
+
+
+
+.container{
+    position: absolute;
+    top:-180vh;
+
+    width: 60%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    position: absolute;
+    top:60vh;
+    user-select: none;
+}
